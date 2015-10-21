@@ -1,4 +1,11 @@
-//Test program code
+/*
+Test program code:
+1. Showcase of using Golang HTTP client
+2. Showcase of using Golang slices and sorting.
+3. Showcase of parsing data in JSON format.
+
+
+*/
 package main
 
 import (
