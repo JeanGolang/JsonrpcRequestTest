@@ -162,6 +162,9 @@ func apiFunc(w http.ResponseWriter, r *http.Request) {
     
     
     req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonStr))
+      if err != nil {
+        panic(err)
+    }
     req.Header.Set("X-Authorization-Token",apiKey)
     req.Header.Set("Content-Type", "application/json")
     
@@ -212,10 +215,6 @@ func apiFunc(w http.ResponseWriter, r *http.Request) {
       
       fmt.Println("Final Output: ", finalOutput)
      
-     //Циклом проходим по каждому элементу стракта. Если country_code в элементе i+1 == country_code в i, то 
-     
-
-     //js.Result
     
     
      
