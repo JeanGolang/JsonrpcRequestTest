@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Parser</title>
+</head>
+
+<style>
+table {
+
+width: 50%;
+margin: 0px auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+</style>
+
+
+<body>
+
+
+<table>
+<caption>Current Parcel Post services providing companies list (Loaded from <b>http://gdeposylka.ru/api/v3/jsonrpc</b> via JSON-RPC call)<br><br></caption>
+<tr>
+<th colspan="2">Country</th>
+</tr>
+<tr rowspan="2">
+<th>Parcel Post company code</th>
+<th>Company name</th>
+</tr>
+{{range . }}
+<tr><td align="center" style="font-weight: bold;  background-color: #FFC0CB; border-right: 0px;" colspan="2"> {{.Country_code}} </td></tr>
+
+{{range .Pairs}}
+<tr>
+<td align="center">{{.Slug}}</td>
+<td align="center">{{.PostName}}</td>
+</tr>
+{{end}}
+
+{{end}}
+
+
+</table>
+
+ 
+ 
+  
+  
+  
+ 
+  
+  
+    
+
+ 
+
+
+</body>
+</html>
